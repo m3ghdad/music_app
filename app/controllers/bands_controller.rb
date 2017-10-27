@@ -37,6 +37,7 @@ class BandsController < ApplicationController
     else
       flash.now[:errors] = @band.errors.full_messages
       render :edit
+    end
   end
 
   def destroy
@@ -46,6 +47,7 @@ class BandsController < ApplicationController
     else
       flash.now[:errors] = @band.errors.full_messages
       render :destroy
+    end
   end
 
   private
