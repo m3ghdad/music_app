@@ -11,12 +11,12 @@ class UsersController < ApplicationController
       #redirect_to main index page
     else
       flash.now[:errors] = @user.erros.full_messages
-      #render new
+      render :new
     end
   end
 
   def show
-    #render new
+    render :new
   end
 
 
