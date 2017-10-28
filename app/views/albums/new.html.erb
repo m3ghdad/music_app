@@ -8,6 +8,18 @@
   type="text"
   name="album[title]"
   value="<%= @album.title %> ">
+  <p>
+    <label for="album_band">Band</label>
+    <select id="album_band" name="album[band_id]">
+      <% Band.all.each do |band| %>
+      <option
+        <%= "selected" if album.band_id == band.id  %>
+        value = " <%= band.id %> "
+        <%= band.name %>
+      </option>
+      <% end %>
+    </select>
+  </p>
 
   <label for="album_year">year</label>
   <input
