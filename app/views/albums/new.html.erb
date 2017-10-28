@@ -1,0 +1,37 @@
+<h1>Create a new album</h1>
+
+<form class="" action=" <%= albums_url %> " method="post">
+
+  <label for="album_title">title</label>
+  <input
+  id="album_title"
+  type="text"
+  name="album[title]"
+  value="<%= @album.title %> ">
+
+  <label for="album_year">year</label>
+  <input
+    id="album_year"
+    type="text"
+    name="album[year]"
+    value="<%= @album.year %> ">
+
+  <label for="album_studio">Studio</label>
+  <input
+    id="album_studio"
+    type="radio"
+    name="album[studio]"
+    value="t"
+    <%= "checked" if @album.studio  %>>
+  <label for="album_live">Live</label>
+  <input
+  id="album_live"
+  type="radio"
+  name="album[studio]"
+  value="f"
+  <%= "checked" if !@album.studio %> >
+
+
+  <input type="submit">
+
+</form>
